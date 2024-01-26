@@ -14,7 +14,16 @@ public class PlayerMovement : MonoBehaviour
         transform.position = new Vector3(transform.position.x+x*move_speed*Time.deltaTime, transform.position.y, transform.position.z);
     
     }
-    
-    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Enemy")
+        {
+            
+            // reduces player health.
+        }
+    }
+
+
 
 }
