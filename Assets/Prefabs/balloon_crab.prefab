@@ -25,6 +25,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 717656977758516922, guid: dd8faa172bd13e54ba9046cdff8dc6f0, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 717656977758516922, guid: dd8faa172bd13e54ba9046cdff8dc6f0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5210177
+      objectReference: {fileID: 0}
+    - target: {fileID: 717656977758516922, guid: dd8faa172bd13e54ba9046cdff8dc6f0, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.23949118
+      objectReference: {fileID: 0}
+    - target: {fileID: 717656977758516922, guid: dd8faa172bd13e54ba9046cdff8dc6f0, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
       value: 0.5
       objectReference: {fileID: 0}

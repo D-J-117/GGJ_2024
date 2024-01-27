@@ -6,8 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Ground
-  tags:
-  - balloon_animal
+  - BalloonAnimal
   layers:
   - Default
   - TransparentFX
