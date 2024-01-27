@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour
 {
     public GameObject pointA;
     public GameObject pointB;
+    public GameObject pointC;
+    public GameObject pointD;  
     public Rigidbody2D rigid;
 
     [SerializeField]
@@ -17,44 +19,38 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
-        // currentPos is the position of the current TARGET 
         currentPos = pointB.transform;
     }
 
     void Update()
     {
         Debug.Log(collide);
-        
-        //if (collide && (rigid.velocity.x == 1) && !tempimmune)
-        //{
-        //    tempimmune = true;
-            //rigid.velocity = new Vector2(-1 * speed, 0);
-        //    Debug.Log(rigid.velocity);
-        //}
-        //if (collide && (rigid.velocity.x == -1) && !tempimmune)
-        //{
-        //    tempimmune = true;
-            //rigid.velocity = new Vector2(1 * speed, 0);
-        //    Debug.Log(rigid.velocity);
-        //}
-        
-
-        //Vector2 point = currentPos.position - transform.position;
+       
         if (currentPos == pointB.transform)
         {
             rigid.velocity = new Vector2(speed, 0);
         }
-        else if (currentPos == pointA.transform) 
+        else if (currentPos == pointA.transform)
         {
             rigid.velocity = new Vector2 (-speed, 0);
         }
 
-        if (collide && (currentPos = pointB.transform))
+
+        if (currentPos == pointC.transform)
+        {
+            rigid.velocity = new Vector2(speed, 0);
+        }
+        else if (currentPos == pointD.transform)
+        {
+            rigid.velocity = new Vector2(-speed, 0);
+        }
+
+        if ((collide && (currentPos = pointB.transform)) || (collide && (currentPos = pointB.transform)))
         {
             currentPos = pointA.transform;
         }
 
-        if (collide && (currentPos = pointA.transform))
+        if ((collide && (currentPos = pointA.transform)) || (collide && (currentPos = pointD.transform)))
         {
             currentPos = pointB.transform;
         }
@@ -64,20 +60,33 @@ public class Enemy : MonoBehaviour
             currentPos = pointA.transform;
         }
 
+
         if (Vector2.Distance(transform.position, currentPos.position) < 0.5f && currentPos == pointA.transform)
         {
             currentPos = pointB.transform;       
         }
 
-       
 
+        if (Vector2.Distance(transform.position, currentPos.position) < 0.5f && currentPos == pointD.transform)
+        {
+            currentPos = pointC.transform;
+        }
+
+
+        if (Vector2.Distance(transform.position, currentPos.position) < 0.5f && currentPos == pointC.transform)
+        {
+            currentPos = pointD.transform;
+        }
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
         Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
+        Gizmos.DrawWireSphere(pointC.transform.position, 0.5f);
+        Gizmos.DrawWireSphere(pointD.transform.position, 0.5f);
         Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
+        Gizmos.DrawLine(pointC.transform.position, pointD.transform.position);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
