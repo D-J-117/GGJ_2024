@@ -17,30 +17,48 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
+        // currentPos is the position of the current TARGET 
         currentPos = pointB.transform;
     }
 
     void Update()
     {
-        if (collide && (rigid.velocity.x == 1))
-        {
-            rigid.velocity = new Vector2(-speed, 0);
-        }
-        if (collide && (rigid.velocity.x == -1))
-        {
-            rigid.velocity = new Vector2(speed, 0);
-        }
+        Debug.Log(collide);
+        
+        //if (collide && (rigid.velocity.x == 1) && !tempimmune)
+        //{
+        //    tempimmune = true;
+            //rigid.velocity = new Vector2(-1 * speed, 0);
+        //    Debug.Log(rigid.velocity);
+        //}
+        //if (collide && (rigid.velocity.x == -1) && !tempimmune)
+        //{
+        //    tempimmune = true;
+            //rigid.velocity = new Vector2(1 * speed, 0);
+        //    Debug.Log(rigid.velocity);
+        //}
+        
 
-        Vector2 point = currentPos.position - transform.position;
+        //Vector2 point = currentPos.position - transform.position;
         if (currentPos == pointB.transform)
         {
             rigid.velocity = new Vector2(speed, 0);
         }
-        else
+        else if (currentPos == pointA.transform) 
         {
             rigid.velocity = new Vector2 (-speed, 0);
-        } 
-            
+        }
+
+        if (collide && (currentPos = pointB.transform))
+        {
+            currentPos = pointA.transform;
+        }
+
+        if (collide && (currentPos = pointA.transform))
+        {
+            currentPos = pointB.transform;
+        }
+
         if (Vector2.Distance(transform.position, currentPos.position) < 0.5f && currentPos == pointB.transform)
         {
             currentPos = pointA.transform;
@@ -48,8 +66,11 @@ public class Enemy : MonoBehaviour
 
         if (Vector2.Distance(transform.position, currentPos.position) < 0.5f && currentPos == pointA.transform)
         {
-            currentPos = pointB.transform;
+            currentPos = pointB.transform;       
         }
+
+       
+
     }
 
     private void OnDrawGizmos()
@@ -69,14 +90,17 @@ public class Enemy : MonoBehaviour
                 collide = true;
                 Debug.Log(collide);
             }
-            else
-            {
-                collide = false;
-                Debug.Log(collide);
-            }
            
 
             // damage function call within player.
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+            collide = false;
         }
     }
 }
