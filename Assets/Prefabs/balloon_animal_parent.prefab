@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 717656977758516922}
   m_Layer: 0
   m_Name: balloon_animal_parent
-  m_TagString: Untagged
+  m_TagString: balloon_animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
