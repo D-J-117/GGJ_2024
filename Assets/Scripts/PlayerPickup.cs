@@ -7,6 +7,7 @@ public class PlayerPickup : MonoBehaviour
 {
     int score = 0;
     [SerializeField] TMP_Text score_text;
+    [SerializeField] AudioClip pickup_clip;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,6 +16,8 @@ public class PlayerPickup : MonoBehaviour
             score++;
             score_text.text = "Score: " + score.ToString();
             Destroy(collision.gameObject);
+
+            GetComponent<AudioSource>().PlayOneShot(pickup_clip);
         }
     }
 }
