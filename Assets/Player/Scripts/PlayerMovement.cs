@@ -14,6 +14,12 @@ public class PlayerMovement : MonoBehaviour
 
     private float x = 0;
     private bool grounded = false;
+    private Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = transform.GetComponent<Rigidbody2D>();
+    }
 
 
     private void Update()
@@ -50,7 +56,9 @@ public class PlayerMovement : MonoBehaviour
                 move_speed = 0;
             }
         }
-        transform.position = new Vector3(transform.position.x+move_speed*Time.deltaTime, transform.position.y, transform.position.z);
+        rb.velocity = new Vector2(move_speed, rb.velocity.y);
+        
+        //transform.position = new Vector3(transform.position.x+move_speed*Time.deltaTime, transform.position.y, transform.position.z);
         
         // Jumping
         if (Input.GetButtonDown("Jump") && grounded)
