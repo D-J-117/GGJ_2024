@@ -35,7 +35,6 @@ public class Enemy : MonoBehaviour
             rigid.velocity = new Vector2 (-speed, 0);
         }
 
-
         if (currentPos == pointC.transform)
         {
             rigid.velocity = new Vector2(speed, 0);
