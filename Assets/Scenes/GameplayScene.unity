@@ -1141,22 +1141,6 @@ PrefabInstance:
       propertyPath: score_text
       value: 
       objectReference: {fileID: 662981507}
-    - target: {fileID: 7104344648677123295, guid: 9f5aae11643c3d241bc69b5c3a2bf922, type: 3}
-      propertyPath: audio_source
-      value: 
-      objectReference: {fileID: 2084488723}
-    - target: {fileID: 7104344648677123295, guid: 9f5aae11643c3d241bc69b5c3a2bf922, type: 3}
-      propertyPath: laugh_sounds.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104344648677123295, guid: 9f5aae11643c3d241bc69b5c3a2bf922, type: 3}
-      propertyPath: laugh_sounds.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: df4731f4219d5f94facfbb56fa3ca780, type: 3}
-    - target: {fileID: 7104344648677123295, guid: 9f5aae11643c3d241bc69b5c3a2bf922, type: 3}
-      propertyPath: laugh_sounds.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: df1511a57eda5144aaa0d76bae1255a3, type: 3}
     - target: {fileID: 7930543118176669081, guid: 9f5aae11643c3d241bc69b5c3a2bf922, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1961,9 +1945,21 @@ PrefabInstance:
       propertyPath: right
       value: 
       objectReference: {fileID: 65126230}
+    - target: {fileID: 2556310121936164473, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: rigid
+      value: 
+      objectReference: {fileID: 1580084186}
+    - target: {fileID: 5506109735865764986, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6740306553860442927, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
       propertyPath: m_Name
       value: Enemy_005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6740306553860442927, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8724036603626101431, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9557,6 +9553,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8724036603626101431, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
   m_PrefabInstance: {fileID: 1190258149}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &645162498 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5506109735865764986, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+  m_PrefabInstance: {fileID: 1190258149}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &648952174
 GameObject:
   m_ObjectHideFlags: 0
@@ -12975,9 +12976,21 @@ PrefabInstance:
       propertyPath: right
       value: 
       objectReference: {fileID: 1426239049}
+    - target: {fileID: 2556310121936164473, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: rigid
+      value: 
+      objectReference: {fileID: 1245477255}
+    - target: {fileID: 5506109735865764986, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6740306553860442927, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
       propertyPath: m_Name
       value: Enemy_006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6740306553860442927, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8724036603626101431, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17783,9 +17796,21 @@ PrefabInstance:
       propertyPath: right
       value: 
       objectReference: {fileID: 128939909}
+    - target: {fileID: 2556310121936164473, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: rigid
+      value: 
+      objectReference: {fileID: 645162498}
+    - target: {fileID: 5506109735865764986, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6740306553860442927, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
       propertyPath: m_Name
       value: Enemy_004
+      objectReference: {fileID: 0}
+    - target: {fileID: 6740306553860442927, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8724036603626101431, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18084,6 +18109,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1245477255 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5506109735865764986, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+  m_PrefabInstance: {fileID: 889656442}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1246489331
 GameObject:
   m_ObjectHideFlags: 0
@@ -19410,6 +19440,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1293613477 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5506109735865764986, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+  m_PrefabInstance: {fileID: 4405365257740305014}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1308216982
 GameObject:
   m_ObjectHideFlags: 0
@@ -23329,6 +23364,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1580084186 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5506109735865764986, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+  m_PrefabInstance: {fileID: 102821869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1586706768
 GameObject:
   m_ObjectHideFlags: 0
@@ -24501,9 +24541,21 @@ PrefabInstance:
       propertyPath: right
       value: 
       objectReference: {fileID: 1719989172}
+    - target: {fileID: 2556310121936164473, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: rigid
+      value: 
+      objectReference: {fileID: 1696570934}
+    - target: {fileID: 5506109735865764986, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6740306553860442927, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
       propertyPath: m_Name
       value: Enemy_003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6740306553860442927, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8724036603626101431, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24818,9 +24870,21 @@ PrefabInstance:
       propertyPath: right
       value: 
       objectReference: {fileID: 1850586360}
+    - target: {fileID: 2556310121936164473, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: rigid
+      value: 
+      objectReference: {fileID: 1769378853}
+    - target: {fileID: 5506109735865764986, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6740306553860442927, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
       propertyPath: m_Name
       value: Enemy_002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6740306553860442927, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8724036603626101431, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25250,6 +25314,11 @@ SpriteRenderer:
 --- !u!4 &1696570931 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8724036603626101431, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+  m_PrefabInstance: {fileID: 1656364055}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1696570934 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5506109735865764986, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
   m_PrefabInstance: {fileID: 1656364055}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1698429537
@@ -26069,6 +26138,11 @@ SpriteRenderer:
 --- !u!4 &1769378850 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8724036603626101431, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+  m_PrefabInstance: {fileID: 1667553322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1769378853 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5506109735865764986, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
   m_PrefabInstance: {fileID: 1667553322}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1773285742
@@ -28847,11 +28921,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7930543118176669081, guid: 9f5aae11643c3d241bc69b5c3a2bf922, type: 3}
   m_PrefabInstance: {fileID: 65489725}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &2084488723 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7854590367539282628, guid: 9f5aae11643c3d241bc69b5c3a2bf922, type: 3}
-  m_PrefabInstance: {fileID: 65489725}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2088554527
 GameObject:
   m_ObjectHideFlags: 0
@@ -29607,6 +29676,14 @@ PrefabInstance:
       propertyPath: right
       value: 
       objectReference: {fileID: 280725826}
+    - target: {fileID: 2556310121936164473, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: rigid
+      value: 
+      objectReference: {fileID: 1293613477}
+    - target: {fileID: 5506109735865764986, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6740306553860442927, guid: f3228321fff3e6a4d9f659eed5e17ff8, type: 3}
       propertyPath: m_Name
       value: Enemy_001

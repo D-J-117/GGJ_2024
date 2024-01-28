@@ -6,8 +6,8 @@ using TMPro;
 
 public class PlayerPickup : MonoBehaviour
 {
-    int score = 0;
-    [SerializeField] TMP_Text score_text;
+    public int score = 0;
+    public TMP_Text score_text;
     [SerializeField] AudioClip pickup_clip;
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c311eca3f4ac17c49a260409b5085acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_speed: 0
+  move_speed: 3
   acceleration: 15
   max_speed: 5
   deceleration: 20
@@ -217,6 +217,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile_prefab: {fileID: 7719251952542394896, guid: 8fa202c4d33f4d745b9babbf81fd86e5, type: 3}
+  laugh_sounds:
+  - {fileID: 8300000, guid: df4731f4219d5f94facfbb56fa3ca780, type: 3}
+  - {fileID: 8300000, guid: df1511a57eda5144aaa0d76bae1255a3, type: 3}
+  audio_source: {fileID: 7854590367539282628}
 --- !u!114 &3158464406610064575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbbce27b68db0d140ae477264b12e7eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   score_text: {fileID: 0}
   pickup_clip: {fileID: 8300000, guid: cf5db1e5d4336864fbceabf35b5c6ebf, type: 3}
 --- !u!82 &7854590367539282628

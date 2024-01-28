@@ -13,7 +13,8 @@ public class PlayerProjectile : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Vector3 target = transform.position+Vector3.right*1;
-            GameObject.Instantiate(projectile_prefab, target, Quaternion.identity);
+            GameObject proj = Instantiate(projectile_prefab, target, Quaternion.identity);
+            proj.GetComponent<ProjectileHitEnemy>().player_pickup = GetComponent<PlayerPickup>();
             int x = Random.Range(0, laugh_sounds.Count);
             audio_source.PlayOneShot(laugh_sounds[x]);
             audio_source.pitch = Random.Range(0.5f, 1.5f);

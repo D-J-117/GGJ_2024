@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log(grounded);
         x = Input.GetAxisRaw("Horizontal");
         
 
@@ -80,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         // Jumping
         grounded = isGrounded();
 
-        if (Input.GetButtonDown("Jump") && grounded)
+        if (Input.GetButtonDown("Jump"))// && grounded)
         {
             Debug.Log("jump");
             Rigidbody2D rb = transform.GetComponent<Rigidbody2D>();
