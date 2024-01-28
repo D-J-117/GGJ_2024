@@ -38,13 +38,4 @@ public class ProjectileMovement : MonoBehaviour
             }
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            Debug.Log("hit enemy");
-            collision.gameObject.GetComponent<Enemy>().makeHappy();
-        }
-    }
 }
