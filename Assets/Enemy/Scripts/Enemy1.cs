@@ -68,7 +68,7 @@ public class Enemy1 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.tag == "Player")
         {
            
             if (!collide)
@@ -84,9 +84,10 @@ public class Enemy1 : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             collide = false;
+
         }
     }
 }
