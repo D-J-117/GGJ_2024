@@ -16,6 +16,7 @@ public class PlayerProjectile : MonoBehaviour
             GameObject.Instantiate(projectile_prefab, target, Quaternion.identity);
             int x = Random.Range(0, laugh_sounds.Count);
             audio_source.PlayOneShot(laugh_sounds[x]);
+            audio_source.pitch = Random.Range(0.5f, 1.5f);
 
         }
     }
