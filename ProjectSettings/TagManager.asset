@@ -7,11 +7,12 @@ TagManager:
   - Enemy
   - Ground
   - BalloonAnimal
+  - balloon_animal
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Collectable
   - Water
   - UI
   - Ground
