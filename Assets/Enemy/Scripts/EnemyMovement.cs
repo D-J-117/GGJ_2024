@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ public class Enemy : MonoBehaviour
         Enemy_Movement();
     }
 
-    void Enemy_Movement()
+    private void Enemy_Movement()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
@@ -26,5 +27,10 @@ public class Enemy : MonoBehaviour
             transform.Translate(-Vector2.left * speed * Time.deltaTime);
             // damage function call within player.
         }
+    }
+
+    public void makeHappy()
+    {
+
     }
 }
