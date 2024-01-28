@@ -6,13 +6,13 @@ TagManager:
   tags:
   - Enemy
   - Ground
-  tags:
-  - balloon_animal
+  - BalloonAnimal
+  - Flag
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Collectable
   - Water
   - UI
   - Ground
