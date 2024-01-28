@@ -20,5 +20,10 @@ public class PlayerAnimation : MonoBehaviour
         {
             transform.GetComponent<Animator>().SetBool("IsMoving", false);
         }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            transform.GetComponent<Animator>().SetBool("Defeated", true);
+        }
     }
 }
