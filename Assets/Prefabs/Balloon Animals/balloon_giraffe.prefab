@@ -72,13 +72,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: balloon_giraffe
       objectReference: {fileID: 0}
+    - target: {fileID: 4718624438495526112, guid: dd8faa172bd13e54ba9046cdff8dc6f0, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7949389558182648618, guid: dd8faa172bd13e54ba9046cdff8dc6f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -9.361992
       objectReference: {fileID: 0}
     - target: {fileID: 7949389558182648618, guid: dd8faa172bd13e54ba9046cdff8dc6f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.6806859
       objectReference: {fileID: 0}
     - target: {fileID: 7949389558182648618, guid: dd8faa172bd13e54ba9046cdff8dc6f0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -90,15 +94,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7949389558182648618, guid: dd8faa172bd13e54ba9046cdff8dc6f0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7949389558182648618, guid: dd8faa172bd13e54ba9046cdff8dc6f0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7949389558182648618, guid: dd8faa172bd13e54ba9046cdff8dc6f0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7949389558182648618, guid: dd8faa172bd13e54ba9046cdff8dc6f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
