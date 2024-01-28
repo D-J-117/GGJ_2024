@@ -22,7 +22,6 @@ public class Enemy1 : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("enemy 1" + collide);
        
         //B AND A
         if (EnemyDirection1 == right.transform)
