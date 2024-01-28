@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5250872896508027982, guid: 9f5aae11643c3d241bc69b5c3a2bf922, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 83b70137ba3df2542a9430618e14e840, type: 2}
     - target: {fileID: 7930543118176669081, guid: 9f5aae11643c3d241bc69b5c3a2bf922, type: 3}
       propertyPath: m_Name
       value: Player
@@ -182,6 +186,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7930543118176669081, guid: 9f5aae11643c3d241bc69b5c3a2bf922, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2015041102}
+    - targetCorrespondingSourceObject: {fileID: 7930543118176669081, guid: 9f5aae11643c3d241bc69b5c3a2bf922, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2015041109}
   m_SourcePrefab: {fileID: 100100000, guid: 9f5aae11643c3d241bc69b5c3a2bf922, type: 3}
 --- !u!1 &497772950
 GameObject:
@@ -637,6 +644,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile_prefab: {fileID: 7719251952542394896, guid: 8fa202c4d33f4d745b9babbf81fd86e5, type: 3}
+--- !u!114 &2015041109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015041095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3c102462e7263499dfe26fe84cdecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

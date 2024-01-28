@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private void Update()
+    private void FixedUpdate()
     {
         x = Input.GetAxisRaw("Horizontal");
         
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 move_speed += deceleration * Time.deltaTime;
             }
-            if(move_speed < 0.1 && move_speed > -0.1)
+            if(move_speed < 0.5 && move_speed > -0.5)
             {
                 move_speed = 0;
             }
@@ -61,6 +61,13 @@ public class PlayerMovement : MonoBehaviour
         //transform.position = new Vector3(transform.position.x+move_speed*Time.deltaTime, transform.position.y, transform.position.z);
 
 
+    }
+
+    private void Update()
+    {
+        // The program encountered an issue when processing the jump logic in FixedUpdate,
+        // where the Player would rarely jump when te input was pressed, even if grounded was True
+        
         // Jumping
         grounded = isGrounded();
         Debug.Log(grounded);
@@ -72,8 +79,6 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(new Vector2(0, jump_force), ForceMode2D.Impulse);
             grounded = false;
         }
-
-
     }
 
     private bool isGrounded()
