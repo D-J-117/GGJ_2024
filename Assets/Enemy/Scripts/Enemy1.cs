@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Enemy1 : MonoBehaviour
 {
-    public GameObject pointA;
-    public GameObject pointB;  
+    public GameObject left;
+    public GameObject right;  
     public Rigidbody2D rigid;
 
     [SerializeField]
@@ -17,7 +17,7 @@ public class Enemy1 : MonoBehaviour
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
-        EnemyDirection1 = pointB.transform;
+        EnemyDirection1 = right.transform;
     }
 
     void Update()
@@ -25,46 +25,46 @@ public class Enemy1 : MonoBehaviour
         Debug.Log("enemy 1" + collide);
        
         //B AND A
-        if (EnemyDirection1 == pointB.transform)
+        if (EnemyDirection1 == right.transform)
         {
             rigid.velocity = new Vector2(speed, 0);
         }
-        else if (EnemyDirection1 == pointA.transform)
+        else if (EnemyDirection1 == left.transform)
         {
             rigid.velocity = new Vector2 (-speed, 0);
         }
 
         //A AND B
-        if (collide && (EnemyDirection1 = pointB.transform))
+        if (collide && (EnemyDirection1 = right.transform))
         {
-            EnemyDirection1 = pointA.transform;
+            EnemyDirection1 = left.transform;
         }
 
-        if (collide && (EnemyDirection1 = pointA.transform))
+        if (collide && (EnemyDirection1 = left.transform))
         {
-            EnemyDirection1 = pointB.transform;
+            EnemyDirection1 = right.transform;
         }
 
         //A AND B
-        if (Vector2.Distance(transform.position, EnemyDirection1.position) < 0.5f && EnemyDirection1 == pointB.transform)
+        if (Vector2.Distance(transform.position, EnemyDirection1.position) < 0.5f && EnemyDirection1 == right.transform)
         {
-            EnemyDirection1 = pointA.transform;
+            EnemyDirection1 = left.transform;
         }
 
 
-        if (Vector2.Distance(transform.position, EnemyDirection1.position) < 0.5f && EnemyDirection1 == pointA.transform)
+        if (Vector2.Distance(transform.position, EnemyDirection1.position) < 0.5f && EnemyDirection1 == left.transform)
         {
-            EnemyDirection1 = pointB.transform;       
+            EnemyDirection1 = right.transform;       
         }
     }
 
     private void OnDrawGizmos()
     {
         //A AND B
-        Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
-        Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
+        Gizmos.DrawWireSphere(left.transform.position, 0.5f);
+        Gizmos.DrawWireSphere(right.transform.position, 0.5f);
         //A AND B
-        Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
+        Gizmos.DrawLine(left.transform.position, right.transform.position);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
