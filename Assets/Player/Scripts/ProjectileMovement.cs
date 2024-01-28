@@ -33,7 +33,6 @@ public class ProjectileMovement : MonoBehaviour
             }
             else
             {
-                Debug.Log("Not visible");
                 Destroy(gameObject);
             }
         }
