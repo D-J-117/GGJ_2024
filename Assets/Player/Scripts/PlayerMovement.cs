@@ -82,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && grounded)
         {
+            Debug.Log("jump");
             Rigidbody2D rb = transform.GetComponent<Rigidbody2D>();
             rb.AddForce(new Vector2(0, jump_force), ForceMode2D.Impulse);
             grounded = false;

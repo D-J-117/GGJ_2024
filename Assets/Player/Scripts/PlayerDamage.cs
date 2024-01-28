@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
-
+using UnityEngine.UI;
+
+
+
 public class PlayerDamage : MonoBehaviour
 {
     public int health = 3;
@@ -19,20 +21,33 @@ public class PlayerDamage : MonoBehaviour
 
             var gradient = (pos2.y-pos1.y) / (pos2.x-pos1.x);
 
-            if (gradient < 1 && gradient > -1)
-            {
-                health--;
-                if (health <= 0)
-                {
-                    Debug.Log("Dead");
-
-                }
+            if (gradient < 1 && gradient > -1)
+
+            {
+
+                health--;
+
+                if (health <= 0)
+
+                {
+
+                    Debug.Log("Dead");
+
+
+
+                }
+
             }
-            else
-            {
-                Debug.Log("Stomped");
-                transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
-
+            else
+
+            {
+
+                Debug.Log("Stomped");
+
+                transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
+
+
+
             }
 
         }

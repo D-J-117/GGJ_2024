@@ -8,6 +8,7 @@ public class Enemy1 : MonoBehaviour
     public GameObject left;
     public GameObject right;  
     public Rigidbody2D rigid;
+    [SerializeField] Animator animator;
 
     [SerializeField]
     private float speed = 2f;
@@ -89,5 +90,10 @@ public class Enemy1 : MonoBehaviour
             collide = false;
 
         }
+    }
+
+    public void MakeHappy()
+    {
+        animator.SetBool("Happy", true);
     }
 }

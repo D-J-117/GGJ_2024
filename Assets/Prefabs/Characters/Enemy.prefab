@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5839918040862224921}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   left: {fileID: 0}
   right: {fileID: 0}
   rigid: {fileID: 0}
+  animator: {fileID: 5839918040862224921}
   speed: 2
 --- !u!50 &5506109735865764986
 Rigidbody2D:
@@ -143,7 +144,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 119
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 8

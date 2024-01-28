@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class ProjectileHitEnemy : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy")
         {
             Debug.Log("hit enemy");
-            //other.GetComponent<Enemy>().makeHappy();
+            Destroy(gameObject.transform.parent.gameObject);
+            other.GetComponent<Enemy1>().MakeHappy();
         }
     }
 }
