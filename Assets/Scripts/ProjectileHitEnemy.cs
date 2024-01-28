@@ -9,7 +9,7 @@ public class ProjectileHitEnemy : MonoBehaviour
         if (other.tag == "Enemy")
         {
             Debug.Log("hit enemy");
-            other.GetComponent<Enemy>().makeHappy();
+            //other.GetComponent<Enemy>().makeHappy();
         }
     }
 }
