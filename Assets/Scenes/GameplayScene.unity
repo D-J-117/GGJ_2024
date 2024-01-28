@@ -801,9 +801,9 @@ GameObject:
   - component: {fileID: 1321950090}
   - component: {fileID: 1321950089}
   - component: {fileID: 1321950088}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1212,9 +1212,9 @@ GameObject:
   - component: {fileID: 1813329485}
   - component: {fileID: 1813329484}
   - component: {fileID: 1813329483}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1370,9 +1370,9 @@ GameObject:
   - component: {fileID: 2143919123}
   - component: {fileID: 2143919122}
   - component: {fileID: 2143919121}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform (2)_001
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
