@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private float x = 0;
     private bool grounded = false;
     private Rigidbody2D rb;
+    private bool face_right = true;
 
     private void Start()
     {
@@ -22,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private void Update()
+    private void FixedUpdate()
     {
         x = Input.GetAxisRaw("Horizontal");
         
@@ -33,12 +34,23 @@ public class PlayerMovement : MonoBehaviour
             {
                 move_speed += acceleration * Time.deltaTime;
             }
+            if (!face_right)
+            {
+                face_right = true;
+                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+
+            }
         }
         else if (x == -1)
         {
             if (move_speed > -max_speed)
             {
                 move_speed -= acceleration * Time.deltaTime;
+            }
+            if (face_right)
+            {
+                face_right = false;
+                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             }
         }
         else
@@ -51,29 +63,29 @@ public class PlayerMovement : MonoBehaviour
             {
                 move_speed += deceleration * Time.deltaTime;
             }
-            if(move_speed < 0.1 && move_speed > -0.1)
+            if(move_speed < 0.5 && move_speed > -0.5)
             {
                 move_speed = 0;
             }
         }
         rb.velocity = new Vector2(move_speed, rb.velocity.y);
 
-        //transform.position = new Vector3(transform.position.x+move_speed*Time.deltaTime, transform.position.y, transform.position.z);
+    }
 
-
+    private void Update()
+    {
+        // The program encountered an issue when processing the jump logic in FixedUpdate,
+        // where the Player would rarely jump when te input was pressed, even if grounded was True
+        
         // Jumping
         grounded = isGrounded();
-        Debug.Log(grounded);
 
         if (Input.GetButtonDown("Jump") && grounded)
         {
-            Debug.Log("Yes");
             Rigidbody2D rb = transform.GetComponent<Rigidbody2D>();
             rb.AddForce(new Vector2(0, jump_force), ForceMode2D.Impulse);
             grounded = false;
         }
-
-
     }
 
     private bool isGrounded()
@@ -85,10 +97,6 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 pos_min = new Vector2(collider.bounds.center.x - collider.bounds.extents.x, transform.position.y);
         Vector2 pos_max = new Vector2(collider.bounds.center.x + collider.bounds.extents.x, transform.position.y);
-
-
-        Debug.Log(pos_min);
-        Debug.Log(pos_max);
 
         RaycastHit2D hit_centre = Physics2D.Raycast(transform.position, Vector2.down, 0.5f, groundLayer);
         RaycastHit2D hit_left = Physics2D.Raycast(pos_min, Vector2.down, 0.5f, groundLayer);

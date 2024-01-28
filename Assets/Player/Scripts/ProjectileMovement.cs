@@ -18,9 +18,9 @@ public class ProjectileMovement : MonoBehaviour
         transform.GetComponent<SpriteRenderer>().sprite = sprites[x];
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        transform.position = transform.position + direction * speed * Time.deltaTime;
+        transform.position = transform.position + direction * speed * Time.fixedDeltaTime;
         
     }
     private void LateUpdate()
@@ -33,7 +33,6 @@ public class ProjectileMovement : MonoBehaviour
             }
             else
             {
-                Debug.Log("Not visible");
                 Destroy(gameObject);
             }
         }
