@@ -43,6 +43,7 @@ public class ProjectileMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            Debug.Log("hit enemy");
             collision.gameObject.GetComponent<Enemy>().makeHappy();
         }
     }

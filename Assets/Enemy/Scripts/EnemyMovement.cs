@@ -31,6 +31,6 @@ public class Enemy : MonoBehaviour
 
     public void makeHappy()
     {
-
+        GetComponent<Animator>().SetBool("Happy", true);
     }
 }
